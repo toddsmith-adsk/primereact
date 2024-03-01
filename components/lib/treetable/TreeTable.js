@@ -324,7 +324,7 @@ export const TreeTable = React.forwardRef((inProps, ref) => {
         }
 
         if (props.onValueChange) {
-            props.onValueChange(processedData({ filters }));
+            props.onValueChange(processedData({ filters: newFilters }));
         }
     };
 
@@ -725,9 +725,9 @@ export const TreeTable = React.forwardRef((inProps, ref) => {
         return scrollableColumns;
     };
 
-    const filterLocal = (value) => {
+    const filterLocal = (value, newFilters) => {
         let filteredNodes = [];
-        let filters = getFilters();
+        let filters = newFilters || getFilters();
         let columns = React.Children.toArray(props.children);
         const isStrictMode = props.filterMode === 'strict';
 
