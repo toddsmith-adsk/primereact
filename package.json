@@ -23,7 +23,8 @@
         "test:check": "jest --watchAll=false --coverage --silent",
         "test:debug": "jest --watch --coverage",
         "apidoc": "node ./api-scripts/build-apidoc.js",
-        "apiwebtypes": "node ./api-scripts/build-webtypes.js"
+        "apiwebtypes": "node ./api-scripts/build-webtypes.js",
+        "prepare": "npm run build:lib"
     },
     "dependencies": {
         "@docsearch/react": "3.5.2",
