@@ -2,6 +2,7 @@
     "name": "primereact",
     "private": false,
     "version": "10.5.1",
+    "main": "dist/primereact.all.min.js",
     "scripts": {
         "dev": "next dev",
         "start": "next start",
